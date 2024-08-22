@@ -41,8 +41,8 @@ with open('error.csv', 'w') as error:
     for key, value in errors_sorted:
         csvw.writerow({'Error': key, 'Count': value})
 with open('user.csv', 'w') as error:
-    fieldnames = ['User', 'INFO', 'ERROR']
+    fieldnames = ['Username', 'INFO', 'ERROR']
     csvw = csv.DictWriter(error, fieldnames=fieldnames)
     csvw.writeheader()
     for key, value in per_user_sorted:
-        csvw.writerow({'User': key, 'INFO': value['INFO'], 'ERROR': value['ERROR']})
+        csvw.writerow({'Username': key, 'INFO': value['INFO'], 'ERROR': value['ERROR']})
